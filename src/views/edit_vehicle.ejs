@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+    <h1>editar</h1>
+    <form method="POST" action="/vehicles/update/<%= vehicle.id %>">
+        <input name="brand" value="<%= vehicle.brand %>" placeholder="marca">
+        <input name="model" value="<%= vehicle.model %>" placeholder="modelo">
+        <input name="year" value="<%= vehicle.year %>" placeholder="ano">
+        <button type="submit">salvar</button>
+    </form>
+    <br>
+    <a href="/vehicles">voltar</a>
+</body>
+</html>

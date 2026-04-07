@@ -1,0 +1,28 @@
+<h1>Pedidos</h1>
+<form method="POST" action="/orders">
+    <select name="clientId">
+        <% clients.forEach(c=> { %>
+            <option value="<%= c.id %>">
+                <%= c.name %>
+            </option>
+            <% }) %>
+    </select>
+    <select name="vehicleId">
+        <% vehicles.forEach(v=> { %>
+            <option value="<%= v.id %>">
+                <%= v.brand %>
+                    <%= v.model %>
+            </option>
+            <% }) %>
+    </select>
+    <button>Criar Pedido</button>
+</form>
+<ul>
+    <% orders.forEach(o => { %>
+        <li>
+            <strong>Pedido <%= o.id %></strong> <br>
+            Cliente: <%= o.clientName %> <br>
+            Veículo: <%= o.vehicleName %>
+        </li>
+        <hr> <% }) %>
+</ul>
